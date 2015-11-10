@@ -1,0 +1,20 @@
+import struct
+import array
+import bitstring
+
+data = "100001010110110101010101010100101010"
+
+s = data[0:9].encode("hex")
+x = int(s)
+print data
+print s
+
+y = struct.pack('@ Q', x)
+print y
+z = struct.unpack('@ Q', y)
+print z
+
+if y == z:
+    print True
+else:
+    print False
