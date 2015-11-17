@@ -37,9 +37,31 @@ The following is a sample structure in C that we'll be using for the weatherbox
 
 ## Packing/Unpacking Interface
 
-Consider the following function in python:
+
+### Firmware (Packing)
+
+Consider if you had to write the weatherbox firmware in python.
+Here is the implementation on the firmware side.
 
     def pack(schema, address, overflow_num):
         # Do some packing
         return packed_data
+
+    # Sample some of the sensors and data
+    schema = 5
+    address = 151
+    overflow_num = 7
+
+    packed_data = pack(schema, address, overflow_num);
+    xbee_send(packed_data);
+
+### Server (Unpacking)
+
+Implement this interface:
+
+    def unpack(packed_data):
+        # unpack stuff here
+
+        return
+
 
