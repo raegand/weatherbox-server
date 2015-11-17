@@ -17,7 +17,6 @@ Where the weatherbox-server looks something like this:
 
 
 # Background information
-
 ## Sample data structure in C
 
 The following is a sample structure in C that we'll be using for the weatherbox
@@ -36,4 +35,11 @@ The following is a sample structure in C that we'll be using for the weatherbox
         uint16_t apogee_w_m2[20];
     } schema_3;
 
+## Packing/Unpacking Interface
+
+Consider the following function in python:
+
+    def pack(schema, address, overflow_num):
+        # Do some packing
+        return packed_data
 
