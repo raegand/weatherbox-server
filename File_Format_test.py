@@ -7,5 +7,5 @@ def format(file):
 
 
 file = open("test.txt", "r")
-print file.readline()
+print file.read()
 file.close()
