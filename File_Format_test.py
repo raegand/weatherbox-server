@@ -28,6 +28,8 @@ def pack_format(file):
     #Return packing format to test
     return struct_fmt
 
+#Test for each type used in schema 3
+print pack_format("test.txt")
 #Test call using schema3 from github struct
 pack_format = pack_format("schema3.txt")
 
