@@ -4,9 +4,13 @@ def test(file):
     x = 0
     for line in file:
         print line
-        if line == 'int8\n' or 'int8':
+        if line == "int8\n" or line == "int8":
             struct_fmt = struct_fmt + 'b'
+            print struct_fmt + '\n'
+        if line == "uint8\n" or line == "uint8":
+            struct_fmt = struct_fmt + 'B'
+            print struct_fmt + '\n'
     file.close()
-    print struct_fmt
+
 
 test("test.txt")
