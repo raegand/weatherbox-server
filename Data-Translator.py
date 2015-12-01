@@ -12,9 +12,9 @@ def unpack(packed_data):
     return unpacked_data
 
 #Basic Test For Packing and Unpacking
-
 #Packed test data
 x = pack(5,151,8,300,2,25,10,45,49,10,55)
+print x
 #Print each packed data out in hex on separate lines
 for each in x:
     print binascii.hexlify(each)
