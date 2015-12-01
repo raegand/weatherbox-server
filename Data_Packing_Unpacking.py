@@ -33,7 +33,7 @@ def unpack(file, packed_data):
     file = open(file, 'r')
     struct_fmt = ''
     for line in file:
-        #Add correct format variable depending on structure from passed file
+        #Add format variable depending on structure from passed file
         if line == "int8\n" or line == "int8":
             struct_fmt = struct_fmt + 'b'
 
