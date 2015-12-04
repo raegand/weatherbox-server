@@ -45,4 +45,4 @@ if x == pack_format:
     print True
 #If the generated file does not match, print message to the console
 else:
-    print "Packing format does not match!"
+    print "Packing format does not match"
