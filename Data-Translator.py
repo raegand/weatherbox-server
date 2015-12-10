@@ -1,4 +1,5 @@
 import struct
+# binascii library imported for testing only
 import binascii
 
 def pack(schema, address, overflow_num, uptime_ms, n, batt_mv, panel_mv, bmp085_press_pa, bmp085_temp_decic, humidity_centi_pct, apogee_2_m2):

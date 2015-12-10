@@ -23,14 +23,21 @@ def pack_format(file):
     file.close()
     return struct_fmt
 
+# Basic File_Format tests for format generation
+# Check that code generates packing for each variable type
 print pack_format("test.txt")
+
+# Generate packing format based on text file based on schema3
 pack_format = pack_format("schema3.txt")
 
+# Harded coded format from schema3
 x = 'H'+'H'+'B'+'I'+'B'+'H'+'H'+'I'+'h'+'H'+'H'
 
+# Print generated packing format for sanity check comparison
 print pack_format
 print x
 
+# Double check that hard coded and generated format are the same
 if x == pack_format:
     print True
 else:
